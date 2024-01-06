@@ -41,7 +41,12 @@ stage("Build") {
       }
 
 
+stage("Build") {
+          steps {
+              bat './gradlew publish'
 
+          }
+      }
 
 
 
