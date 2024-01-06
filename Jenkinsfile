@@ -41,12 +41,27 @@ stage("Build") {
       }
 
 
-stage("Deploy") {
-          steps {
-              bat './gradlew publish'
-          }
-
-      }
+ stage("Deploy & notification"){
+            steps {
+                bat './gradlew publish'
+            }
+            post {
+                  success {
+                       notifyEvents message: 'Success ',
+                       token: '1_xdr6m1f2hyoyro1ymngz57xjpjsu4d'
+                       mail to: 'km_mohandouali@esi.dz',
+                       subject: "Success",
+                       body: "Deployment successful"
+                  }
+                  failure {
+                        notifyEvents message: 'Failure',
+                        token: '1_xdr6m1f2hyoyro1ymngz57xjpjsu4d'
+                        mail to: 'km_mohandouali@esi.dz',
+                        subject: "Failure",
+                        body: "Something went wrong "
+                  }
+            }
+        }
 
 
 
