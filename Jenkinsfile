@@ -58,6 +58,8 @@ stage("Build") {
                         token: '1_xdr6m1f2hyoyro1ymngz57xjpjsu4d'
                         mail to: 'km_mohandouali@esi.dz',
                         subject: "Failure",
+
+
                         body: "Something went wrong "
 
                   }
