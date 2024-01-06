@@ -60,7 +60,6 @@ stage("Build") {
                         subject: "Failure",
                         body: "Something went wrong "
 
-
                   }
             }
         }
