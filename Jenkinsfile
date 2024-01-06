@@ -41,10 +41,9 @@ stage("Build") {
       }
 
 
-stage("Build") {
+stage("Deploy") {
           steps {
               bat './gradlew publish'
-
           }
       }
 
