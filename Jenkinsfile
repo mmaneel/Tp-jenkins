@@ -4,7 +4,7 @@ pipeline {
      stage("test"){
       steps{
           bat './gradlew test'
-          archiveArtifacts 'build/test-results/test/'
+          junit 'build/test-results/test/*.xml'
           cucumber buildStatus: 'UNSTABLE',
                           reportTitle: 'My report',
                           fileIncludePattern: '*/.json',
