@@ -13,6 +13,8 @@ pipeline {
                               [
                                   'key': 'Browser',
                                   'value': 'Firefox'
+
+
                               ]
                           ]
       }
