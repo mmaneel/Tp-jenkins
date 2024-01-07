@@ -59,9 +59,6 @@ stage("Build") {
                         mail to: 'km_mohandouali@esi.dz',
                         subject: "Failure",
                         body: "Something went wrong "
-
-
-
                   }
             }
         }
