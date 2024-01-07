@@ -26,6 +26,7 @@ pipeline {
                         bat "./gradlew sonar"
                     }
     }
+
     }
  stage("Code Quality") {
              steps {
