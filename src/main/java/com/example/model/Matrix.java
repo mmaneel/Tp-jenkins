@@ -83,7 +83,7 @@ public class Matrix {
 		}
 		return mat;
 	}
-	/*
+
 	@Override
 	public int hashCode() {
 		int result = Arrays.deepHashCode(data);
@@ -91,7 +91,7 @@ public class Matrix {
 		result = 31 * result + ncols;
 		return result;
 	}
-*/
+
 	@Override
 	public boolean equals(Object obj) {
 		if(this == obj) {
