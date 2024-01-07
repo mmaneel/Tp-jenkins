@@ -7,16 +7,8 @@ pipeline {
           junit 'build/test-results/test/*.xml'
           cucumber buildStatus: 'UNSTABLE',
                           reportTitle: 'My report',
-                          fileIncludePattern: '*/.json',
-                          trendsLimit: 10,
-                          classifications: [
-                              [
-                                  'key': 'Browser',
-                                  'value': 'Firefox'
-
-
-                              ]
-                          ]
+                          fileIncludePattern: 'target/report.json',
+                          trendsLimit: 10
       }
     }
  stage("Code Analysis"){
